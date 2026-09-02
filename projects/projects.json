@@ -1,0 +1,35 @@
+[
+  {
+    "name": "Excalistudy",
+    "desc": "Semester and work-life manager designed to make study and learning efficient and organized.",
+    "image": "excalistudy",
+    "category": "web",
+    "tags": ["Next.js", "React", "Cloud", "Vercel"],
+    "links": {
+      "view": "https://excalistudy.vercel.app/",
+      "code": "https://github.com/001-Himal"
+    }
+  },
+  {
+    "name": "Collecto",
+    "desc": "Minimalist and structured bookmark manager with browsing reports, preventing the bookmark graveyard. Built with Next.js + Vercel + PostgreSQL.",
+    "image": "collecto",
+    "category": "web",
+    "tags": ["Next.js", "PostgreSQL", "Vercel", "Tailwind"],
+    "links": {
+      "view": "https://collecto-beta.vercel.app/",
+      "code": "https://github.com/001-Himal"
+    }
+  },
+  {
+    "name": "Mediatracklist",
+    "desc": "Personal movies and TV series tracking platform with season/sequel updates. Powered by React, TMDB API, Supabase and PostgreSQL.",
+    "image": "mediatracklist",
+    "category": "web",
+    "tags": ["React", "Supabase", "TMDB API", "PostgreSQL"],
+    "links": {
+      "view": "https://mediatracklist.vercel.app/",
+      "code": "https://github.com/001-Himal"
+    }
+  }
+]

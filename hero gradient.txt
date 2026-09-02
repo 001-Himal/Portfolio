@@ -1,0 +1,173 @@
+## Aura Gradient: "Microdots"
+
+### Visual Description
+A cool atmospheric gradient background using layered CSS blend modes.
+Category: **lattice**. Theme: **dark**.
+The composition uses 3 layers over a dark backdrop (`#100e0b`):
+
+- **Layer 1:** Radial gradient. Blend mode: `normal`, no blur.
+- **Layer 2:** Radial gradient. Blend mode: `screen`, blur: `163px` (mobile) / `234px` (desktop).
+- **Layer 3:** Radial gradient. Blend mode: `screen`, blur: `113px` (mobile) / `162px` (desktop).
+
+
+
+### ⚠️ Critical: Blend Mode Architecture
+These layers use CSS `mix-blend-mode` (screen). 
+Blend modes composite against whatever is **behind** the element - the page/body background.
+
+**DO NOT** set `background-color` on the gradient container itself. Instead:
+1. Set `background-color: #100e0b` on the **`<body>`** or **page wrapper**.
+2. The gradient container must be **transparent** (no background).
+3. The layers will blend against the body background to create the atmospheric effect.
+
+If you put the base color on the container, the blend modes will composite against that instead of the page, producing incorrect (washed-out or too dark) results.
+
+
+### 🌗 Light / Dark Theme Adaptation
+The layer blend modes (`screen`) are tuned for a dark backdrop. If you composite them over a **light or white** surface they wash out (the gradient "disappears"). To keep the same colors, swap each of those blend modes for `multiply` and keep the backlight light:
+
+| Original blend mode | On a light surface use |
+| --- | --- |
+| `screen` | `multiply` |
+
+`multiply`, `normal`, and dark backdrops need no change.
+### Implementation Notes
+- Give the container an explicit `min-height: 100vh` (or the height of your section). Every layer is `position: absolute; inset: 0;` so the stack contributes `0px` of height on its own - without this the page collapses to a bare background.
+- Each layer is an absolutely-positioned div with its own `mix-blend-mode` and optional `filter: blur()`.
+- Use `transform: translateZ(0)` or `will-change: transform` on blur layers for GPU acceleration.
+- All decorative layers should have `pointer-events: none` and `aria-hidden="true"`.
+- The parent container needs `position: relative` and `overflow: hidden`.
+- **The base color (#100e0b) must be on the body/page, NOT on the container.**
+- **Page content must sit above the layers**: wrap it in an element with `position: relative` and `z-index: 1`, otherwise the absolutely-positioned layers paint over it.
+- **Do not generate sample text, headings, or demo content** - produce the background only, ready for real content.
+
+### CSS Code
+
+```css
+/* Microdots - Aura */
+/* Base color on BODY - blend modes composite against this */
+body {
+  background-color: #100e0b;
+}
+
+.aura-bg {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh; /* height must be explicit - absolute layers add none */
+  /* NO background-color - layers blend against body */
+}
+
+/* Layer 1 - normal */
+.aura-layer-1 {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(147,197,253,0.16) 1px, transparent 1.5px);
+  background-size: 14px 14px;
+  mix-blend-mode: normal;
+  transform: translateZ(0);
+  will-change: transform;
+  pointer-events: none;
+}
+
+/* Layer 2 - screen */
+.aura-layer-2 {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 65% 50% at 50% 45%, rgba(59,130,246,0.26) 0%, transparent 75%);
+  mix-blend-mode: screen;
+  filter: blur(163px); /* use 234px on desktop */
+  transform: translateZ(0);
+  will-change: transform;
+  pointer-events: none;
+}
+
+/* Layer 3 - screen */
+.aura-layer-3 {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 80% 25%, rgba(125,211,252,0.22) 0%, transparent 30%);
+  mix-blend-mode: screen;
+  filter: blur(113px); /* use 162px on desktop */
+  transform: translateZ(0);
+  will-change: transform;
+  pointer-events: none;
+}
+
+```
+
+
+### React / Next.js
+
+```tsx
+export function AuraBackground() {
+  return (
+    <div
+      style={{
+        position: "relative",
+        overflow: "hidden",
+        minHeight: "100vh",
+        /* NO backgroundColor - blend modes composite against body/page bg */
+      }}
+    >
+      <div
+        style={{
+          position: "absolute",
+          inset: 0,
+          background: "radial-gradient(circle, rgba(147,197,253,0.16) 1px, transparent 1.5px)",
+          backgroundSize: "14px 14px",
+          mixBlendMode: "normal",
+          pointerEvents: "none",
+          transform: "translateZ(0)",
+        }}
+        aria-hidden="true"
+      />
+      <div
+        style={{
+          position: "absolute",
+          inset: 0,
+          background: "radial-gradient(ellipse 65% 50% at 50% 45%, rgba(59,130,246,0.26) 0%, transparent 75%)",
+          mixBlendMode: "screen",
+          filter: "blur(163px)", /* 234px on desktop */
+          pointerEvents: "none",
+          transform: "translateZ(0)",
+        }}
+        aria-hidden="true"
+      />
+      <div
+        style={{
+          position: "absolute",
+          inset: 0,
+          background: "radial-gradient(circle at 80% 25%, rgba(125,211,252,0.22) 0%, transparent 30%)",
+          mixBlendMode: "screen",
+          filter: "blur(113px)", /* 162px on desktop */
+          pointerEvents: "none",
+          transform: "translateZ(0)",
+        }}
+        aria-hidden="true"
+      />
+      {/* Your content lives here - put it in a wrapper that sits ABOVE the layers */}
+      <div style={{ position: "relative", zIndex: 1 }}>
+        {/* Your actual content */}
+      </div>
+    </div>
+  );
+}
+```
+
+> **Remember:** Set `body { background-color: #100e0b; }` in your global CSS. The component container must NOT have its own background-color.
+
+> **Important:** Do NOT put any placeholder text or sample headings in the output. The gradient background should be left clean - your (or the user's) real content goes inside the `zIndex: 1` wrapper.
+
+### Vanilla HTML
+
+```html
+<div class="aura-bg">
+  <div class="aura-layer-1" aria-hidden="true"></div>
+  <div class="aura-layer-2" aria-hidden="true"></div>
+  <div class="aura-layer-3" aria-hidden="true"></div>
+  <!-- Your content lives here - this wrapper sits ABOVE the absolute layers -->
+  <div style="position: relative; z-index: 1;">
+    <!-- Your actual content -->
+  </div>
+</div>
+```

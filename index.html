@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords"
+        content="Himal, portfolio, full stack dev, devops, cloud, system design, python, react, nextjs, postgresql, supabase" />
+    <meta name="description"
+        content="Portfolio of Himal. Full-Stack Developer with expertise in System Design, Cloud & DevOps, and Modern Web Applications." />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Favicon -->
+    <link id='favicon' rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-png">
+    <title>Himal | Portfolio</title>
+</head>
+
+<body>
+
+    <!-- Top Horizontal Scroll Progress Bar -->
+    <div id="scroll-progress" class="scroll-progress-bar"></div>
+
+    <!-- Modern Round Floating Glassmorphism Navbar (Auto-hiding on scroll down) -->
+    <header id="floating-header">
+        <a href="#home" class="logo"><i class="fas fa-terminal"></i> Himal</a>
+
+        <div id="menu" class="fas fa-bars"></div>
+        <nav class="navbar">
+            <ul>
+                <li><a class="active" href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#work">Projects</a></li>
+                <li><a href="#footer">Connect</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Navbar Ends -->
+
+    <!-- Main Page Scroll Flow Wrapper (Sits above the fixed sticky footer) -->
+    <main class="main-page-flow">
+
+        <!-- Home / Intro Hero Section Starts -->
+        <section class="home aura-bg" id="home">
+            <!-- Microdots Aura Layers -->
+            <div class="aura-layer-1" aria-hidden="true"></div>
+            <div class="aura-layer-2" aria-hidden="true"></div>
+            <div class="aura-layer-3" aria-hidden="true"></div>
+
+            <div id="particles-js"></div>
+
+            <div class="content">
+                <h2>Hi There,<br /> I'm <span>Himal</span></h2>
+                <p>i am into <span class="typing-text"></span></p>
+                <a href="#about" class="btn">
+                    <span>About Me</span>
+                    <i class="fas fa-arrow-circle-down"></i>
+                </a>
+                <div class="socials">
+                    <ul class="social-icons">
+                        <li><a class="github" aria-label="GitHub" href="https://github.com/001-Himal" target="_blank"
+                                rel="noopener noreferrer"><i class="fab fa-github"></i></a></li>
+                        <li><a class="linkedin" aria-label="LinkedIn" href="https://www.linkedin.com/in/himal-thapa-7a2998359/" target="_blank"
+                                rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a></li>
+                        <li><a class="twitter" aria-label="Twitter" href="https://twitter.com" target="_blank"
+                                rel="noopener noreferrer"><i class="fab fa-twitter"></i></a></li>
+                        <li><a class="telegram" aria-label="Telegram" href="https://telegram.org" target="_blank"
+                                rel="noopener noreferrer"><i class="fab fa-telegram-plane"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="image">
+                <img draggable="false" class="tilt" src="./assets/images/hero.png" alt="Hero Portrait">
+            </div>
+        </section>
+        <!-- Home / Intro Hero Section Ends -->
+
+        <!-- About Section with Aurora Beams Gradient Starts -->
+        <section class="about aurora-bg" id="about">
+            <!-- Aurora Beams Layers -->
+            <div class="aurora-layer-1" aria-hidden="true"></div>
+            <div class="aurora-layer-2" aria-hidden="true"></div>
+            <div class="aurora-layer-3" aria-hidden="true"></div>
+            <div class="aurora-grain" aria-hidden="true">
+                <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                    <filter id="grain-about">
+                        <feTurbulence type="fractalNoise" baseFrequency="0.7" numOctaves="4" stitchTiles="stitch"/>
+                        <feColorMatrix type="matrix" values="0.181 0.608 0.061 0 0.075 0.181 0.608 0.061 0 0.075 0.181 0.608 0.061 0 0.075 0 0 0 1 0"/>
+                    </filter>
+                    <rect width="100%" height="100%" filter="url(#grain-about)"/>
+                </svg>
+            </div>
+
+            <div class="aura-content">
+                <h2 class="heading heading-right"><i class="fas fa-user-alt"></i> <span>About</span></h2>
+
+                <div class="row">
+                    <div class="image">
+                        <img draggable="false" class="tilt" src="./assets/images/profile2.jpg" alt="Profile Picture">
+                    </div>
+
+                    <!-- Point-Wise Minimal About Content -->
+                    <div class="content about-point-grid">
+                        <!-- Bullet Cards -->
+                        <div class="about-points">
+                            <div class="point-card">
+                                <div class="point-icon"><i class="fas fa-cloud"></i></div>
+                                <div class="point-text">
+                                    <strong>Cloud & DevOps Architecture</strong>
+                                    <p>Passionate about cloud infrastructure, containerization with Docker, CI/CD
+                                        pipelines, and Linux environments.</p>
+                                </div>
+                            </div>
+
+                            <div class="point-card">
+                                <div class="point-icon"><i class="fas fa-cubes"></i></div>
+                                <div class="point-text">
+                                    <strong>System Design & Architecture</strong>
+                                    <p>Designing scalable backend workflows, clean data modeling, and robust API
+                                        contracts.</p>
+                                </div>
+                            </div>
+
+                            <div class="point-card">
+                                <div class="point-icon"><i class="fas fa-code"></i></div>
+                                <div class="point-text">
+                                    <strong>Modern App Development</strong>
+                                    <p>Building responsive, high-performance web applications using React, Next.js,
+                                        Python, PostgreSQL, and Supabase.</p>
+                                </div>
+                            </div>
+
+                            <div class="point-card">
+                                <div class="point-icon"><i class="fas fa-brain"></i></div>
+                                <div class="point-text">
+                                    <strong>Engineering Mindset</strong>
+                                    <p>System thinking, structured problem solving, rapid technological adoption, and
+                                        performance optimization.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Minimal Action Button -->
+                        <div class="resumebtn">
+                            <a href="#work" class="btn">
+                                <span>View Projects</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- About Section Ends -->
+
+        <!-- Skills Section with Aurora Beams Gradient Starts -->
+        <section class="skills aurora-bg" id="skills">
+            <!-- Aurora Beams Layers -->
+            <div class="aurora-layer-1" aria-hidden="true"></div>
+            <div class="aurora-layer-2" aria-hidden="true"></div>
+            <div class="aurora-layer-3" aria-hidden="true"></div>
+            <div class="aurora-grain" aria-hidden="true">
+                <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                    <filter id="grain-skills">
+                        <feTurbulence type="fractalNoise" baseFrequency="0.7" numOctaves="4" stitchTiles="stitch"/>
+                        <feColorMatrix type="matrix" values="0.181 0.608 0.061 0 0.075 0.181 0.608 0.061 0 0.075 0.181 0.608 0.061 0 0.075 0 0 0 1 0"/>
+                    </filter>
+                    <rect width="100%" height="100%" filter="url(#grain-skills)"/>
+                </svg>
+            </div>
+
+            <div class="skills-content-wrap">
+                <h2 class="heading heading-left"><i class="fas fa-laptop-code"></i> <span>Skills</span></h2>
+
+                <div class="container">
+                    <div class="row" id="skillsContainer">
+                        <!-- Dynamically populated via script.js -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Skills Section Ends -->
+
+        <!-- Education Section Starts -->
+        <section class="education aura-bg" id="education">
+            <!-- Microdots Aura Layers -->
+            <div class="aura-layer-1" aria-hidden="true"></div>
+            <div class="aura-layer-2" aria-hidden="true"></div>
+            <div class="aura-layer-3" aria-hidden="true"></div>
+
+            <div class="education-content-wrap">
+                <h1 class="heading heading-right"><i class="fas fa-graduation-cap"></i> <span>Education</span></h1>
+
+                <div class="box-container">
+                    <div class="box">
+                        <div class="image">
+                            <img draggable="false" src="./assets/images/collage.png"
+                                onerror="this.src='https://happenings.lpu.in/wp-content/uploads/2025/03/lpu-campus.jpg'"
+                                alt="Lovely Professional University (LPU)">
+                        </div>
+                        <div class="content">
+                            <h3>Bachelor of Technology (B.Tech)</h3>
+                            <p>Lovely Professional University (LPU)</p>
+                            <h4>2nd Year B.Tech Student &bull; Pursuing</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Education Section Ends -->
+
+        <!-- Optimized Modern Projects Section Starts -->
+        <section class="work aura-bg" id="work">
+            <!-- Microdots Aura Layers -->
+            <div class="aura-layer-1" aria-hidden="true"></div>
+            <div class="aura-layer-2" aria-hidden="true"></div>
+            <div class="aura-layer-3" aria-hidden="true"></div>
+
+            <div class="work-content-wrap">
+                <h2 class="heading heading-left"><i class="fas fa-cubes"></i> <span>Projects</span></h2>
+
+                <div class="projects-modern-grid" id="projectsContainer">
+                    <!-- Dynamically populated via script.js -->
+                </div>
+
+                <div class="viewall">
+                    <a href="https://github.com/001-Himal" target="_blank" rel="noopener noreferrer" class="btn">
+                        <span>View More On GitHub</span>
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- Projects Section Ends -->
+
+    </main>
+    <!-- Main Page Content Ends -->
+
+    <!-- Full-Screen Living 3D Sticky Footer Starts -->
+    <footer class="sticky-footer" id="footer">
+        <div class="sticky-footer-inner" id="footer-3d-wrap">
+
+            <!-- 3D Living Green Three.js Canvas Background (SylvaHero Atmosphere) -->
+            <div class="footer-3d-bg-wrap">
+                <canvas id="footer-3d-scene"></canvas>
+                <div class="footer-overlay-gradient"></div>
+            </div>
+
+            <!-- Multi-layer Aura Gradient Background for Footer -->
+            <div class="aura-layer-1" aria-hidden="true"></div>
+            <div class="aura-layer-2" aria-hidden="true"></div>
+            <div class="aura-layer-3" aria-hidden="true"></div>
+
+            <!-- Human, Minimal & Centered Footer Content Layer -->
+            <div class="footer-content-layer">
+
+                <div class="footer-minimal-hero">
+                    <h2 class="footer-title">Let's connect.</h2>
+                    <p class="footer-subtitle">Always open to interesting projects, ideas &amp; opportunities.</p>
+
+                    <div class="footer-action-pills">
+                        <a href="https://github.com/001-Himal" target="_blank" rel="noopener noreferrer" class="btn-footer-pill">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/himal-thapa-7a2998359/" target="_blank" rel="noopener noreferrer"
+                            class="btn-footer-pill">
+                            <i class="fab fa-linkedin-in"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <button type="button" class="btn-footer-pill btn-footer-primary" id="open-message-modal">
+                            <i class="fas fa-envelope"></i>
+                            <span>Get in Touch</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Clean Bottom Line & Tiny Copyright -->
+                <div class="footer-bottom-container">
+                    <div class="footer-divider-line"></div>
+                    <div class="footer-bottom-flex">
+                        <p class="footer-copyright">&copy; 2026 Himal Thapa &bull; Built with React &amp; Next.js</p>
+                        <a href="#home" class="footer-back-to-top" aria-label="Back to top">
+                            <i class="fas fa-arrow-up"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </footer>
+    <!-- Full-Screen Sticky Footer Ends -->
+
+    <!-- Interactive Get in Touch Modal Popup (Opens only on click) -->
+    <div id="message-modal" class="message-modal-overlay">
+        <div class="message-modal-dialog glass-card">
+            <button type="button" class="modal-close-btn" id="close-message-modal"
+                aria-label="Close Modal">&times;</button>
+            <div class="modal-header">
+                <h3><i class="fas fa-paper-plane"></i> Get in Touch</h3>
+                <p>Drop a note below and I'll get back to you promptly.</p>
+            </div>
+            <form id="contact-form">
+                <div class="modal-form-grid">
+                    <div class="input-wrap">
+                        <i class="fas fa-user"></i>
+                        <input type="text" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="input-wrap">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="input-wrap form-field-full textarea-wrap">
+                        <i class="fas fa-comment-dots"></i>
+                        <textarea name="message" placeholder="What's on your mind?" required></textarea>
+                    </div>
+                    <div class="form-submit-area">
+                        <button type="submit" class="btn-glow-submit">
+                            <span>Send Message</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- ==== JAVASCRIPT CDNS ==== -->
+    <!-- Three.js Runtime for 3D Background -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.149.0/build/three.min.js"></script>
+
+    <!-- JQuery CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Typed.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js"
+        integrity="sha512-1KbKusm/hAtkX5FScVR5G36wodIMnVd/aP04af06iyQTkD17szAMGNmxfNH+tEuFp3Og/P5G32L1qEC47CZbUQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Particles.js Links -->
+    <script src="./assets/js/particles.min.js"></script>
+    <script src="./assets/js/app.js"></script>
+
+    <!-- Vanilla Tilt.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"
+        integrity="sha512-SttpKhJqONuBVxbRcuH0wezjuX+BoFoli0yPsnrAADcHsQMW8rkR84ItFHGIkPvhnlRnE2FaifDOUw+EltbuHg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- ScrollReveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+    <!-- Main App Script -->
+    <script src="./assets/js/script.js"></script>
+
+    <!-- 3D Living Green Sylva Engine -->
+    <script src="./assets/js/sylva-3d.js"></script>
+
+</body>
+
+</html>

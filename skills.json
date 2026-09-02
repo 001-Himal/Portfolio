@@ -1,0 +1,66 @@
+[
+    {
+        "name": "ReactJS",
+        "icon": "https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/000000/external-react-a-javascript-library-for-building-user-interfaces-logo-color-tal-revivo.png"
+    },
+    {
+        "name": "Next.js",
+        "icon": "https://img.icons8.com/color/48/000000/nextjs.png"
+    },
+    {
+        "name": "Python",
+        "icon": "https://img.icons8.com/color/48/000000/python--v1.png"
+    },
+    {
+        "name": "PostgreSQL",
+        "icon": "https://img.icons8.com/color/48/000000/postgreesql.png"
+    },
+    {
+        "name": "Supabase",
+        "icon": "https://img.icons8.com/color/48/000000/supabase.png"
+    },
+    {
+        "name": "Docker",
+        "icon": "https://img.icons8.com/color/48/000000/docker.png"
+    },
+    {
+        "name": "Linux",
+        "icon": "https://img.icons8.com/color/48/000000/linux--v1.png"
+    },
+    {
+        "name": "Git & GitHub",
+        "icon": "https://img.icons8.com/color/48/000000/git.png"
+    },
+    {
+        "name": "JavaScript",
+        "icon": "https://img.icons8.com/color/48/000000/javascript--v1.png"
+    },
+    {
+        "name": "HTML5",
+        "icon": "https://img.icons8.com/color/48/000000/html-5--v1.png"
+    },
+    {
+        "name": "CSS3",
+        "icon": "https://img.icons8.com/color/48/000000/css3.png"
+    },
+    {
+        "name": "Figma",
+        "icon": "https://img.icons8.com/color/48/000000/figma--v1.png"
+    },
+    {
+        "name": "CLI & Bash",
+        "icon": "https://img.icons8.com/color/48/000000/console.png"
+    },
+    {
+        "name": "Networking",
+        "icon": "https://img.icons8.com/fluency/48/000000/network-cable.png"
+    },
+    {
+        "name": "Cloud & DevOps",
+        "icon": "https://img.icons8.com/color/48/000000/cloud.png"
+    },
+    {
+        "name": "System Design",
+        "icon": "https://img.icons8.com/fluency/48/000000/flow-chart.png"
+    }
+]
